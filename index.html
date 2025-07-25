@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Searching App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <h2>🚗 Car Searching App</h2>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchBox"
+          placeholder="Search by name or color"
+          onkeyup="searchCar()"
+        />
+        <select id="companySelect" onchange="searchCar()">
+          <option value="">All Companies</option>
+          <option value="Honda">Honda</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Suzuki">Suzuki</option>
+          <option value="Kia">Kia</option>
+        </select>
+        <input
+          type="text"
+          id="engineInput"
+          placeholder="Search by engine (e.g., 1800cc)"
+          onkeyup="searchCar()"
+        />
+      </div>
+
+      <div id="carResult" class="car-grid"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
